@@ -17,7 +17,7 @@ class EventListener implements Listener {
     public function onCommand(PlayerCommandPreprocessEvent $event) {
         $player = $event->getPlayer();
         $cmd = explode(" ", strtolower($event->getMessage()));
-        if($cmd[0] == "/transfer" || $cmd[0] == "/transferserver") {
+        if($cmd[0] == "/servertransfer" || $cmd[0] == "/server") {
 
             if(isset($cmd[1]) && isset($cmd[2])) {
                 if($player->hasPermission("st.transfer")) {
